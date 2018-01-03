@@ -27,6 +27,8 @@ project (lima)
 
 set(NAME "core")
 
+message( "CMAKE_FIND_ROOT_PATH is ${CMAKE_FIND_ROOT_PATH}" )
+
 #--------------------------------------------------------------------------------
 # cmake/ directory contains tools 
 #--------------------------------------------------------------------------------
@@ -132,7 +134,7 @@ endif()
 # Enable python binding code compilation using sip generator
 #--------------------------------------------------------------------------------
 if(LIMA_ENABLE_PYTHON)
-    find_package(PythonInterp 2.6)
+    find_package(PythonInterp2.6)
     find_package(PythonLibs 2.6)
     if(${PYTHONINTERP_FOUND})
       # python site-packages folder
