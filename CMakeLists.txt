@@ -31,8 +31,7 @@ set(NAME "core")
 if(DEFINED CMAKE_FIND_ROOT_PATH)
   message( "CMAKE_FIND_ROOT_PATH is ${CMAKE_FIND_ROOT_PATH}" )
   link_directories("${CMAKE_FIND_ROOT_PATH}/lib")
-  message ( "LINK_DIRECTORIES is ${LINK_DIRECTORIES}" )
-endif()
+ endif()
 #--------------------------------------------------------------------------------
 # cmake/ directory contains tools 
 #--------------------------------------------------------------------------------
@@ -469,6 +468,8 @@ else()
             LIBRARY DESTINATION lib
             PUBLIC_HEADER DESTINATION include)
 endif()
+
+message ( "LINK_DIRECTORIES is ${LINK_DIRECTORIES}" )
 
 #--------------------------------------------------------------------------------
 # SIP generates binding code for python
