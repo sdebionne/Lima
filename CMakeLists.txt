@@ -27,8 +27,11 @@ project (lima)
 
 set(NAME "core")
 
-message( "CMAKE_FIND_ROOT_PATH is ${CMAKE_FIND_ROOT_PATH}" )
-
+# in case of re-root like from conda build
+if(DEFINED CMAKE_FIND_ROOT_PATH)
+  message( "CMAKE_FIND_ROOT_PATH is ${CMAKE_FIND_ROOT_PATH}" )
+  link_directories(${CMAKE_FIND_ROOT_PATH}/lib)
+endif()
 #--------------------------------------------------------------------------------
 # cmake/ directory contains tools 
 #--------------------------------------------------------------------------------
