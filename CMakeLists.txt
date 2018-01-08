@@ -27,6 +27,10 @@ project (lima)
 
 set(NAME "core")
 
+if(DEFINED_ENV{PREFIX})
+  link_directories($ENV{PREFIX}/lib)
+endif()
+
 #--------------------------------------------------------------------------------
 # cmake/ directory contains tools 
 #--------------------------------------------------------------------------------
