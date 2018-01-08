@@ -27,7 +27,7 @@ project (lima)
 
 set(NAME "core")
 
-if(DEFINED_ENV{PREFIX})
+if(DEFINED ENV{PREFIX})
   link_directories($ENV{PREFIX}/lib)
 endif()
 
