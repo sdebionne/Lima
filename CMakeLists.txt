@@ -40,7 +40,7 @@ include(LimaTools)
 find_package(Threads REQUIRED)
 
 if(UNIX)
-    set(CMAKE_SHARED_LINKER_FLAGS "-Wl,--no-undefined")
+    #set(CMAKE_SHARED_LINKER_FLAGS "-Wl,--no-undefined")
 endif()
 
 
